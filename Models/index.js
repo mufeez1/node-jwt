@@ -4,7 +4,7 @@ const {Sequelize, DataTypes} = require('sequelize')
 //Database connection with dialect of postgres specifying the database we are using
 //port for my database is 5433
 //database name is discover
-const sequelize = new Sequelize(`postgres://apprenticeship-marium:VJlZO7Xfaspefc4xPkr7MD@emblemtechnologies.cluster-custom-cafzdqgmbkp1.ap-southeast-1.rds.amazonaws.com:5432/apprenticeship_db`, {dialect: "postgres"})
+const sequelize = new Sequelize(process.env.CONNECTION_STRING , {dialect: "postgres"})
 
 
 //checking if connection is done
